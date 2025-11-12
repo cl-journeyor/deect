@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.index {
+    display: flex;
+    flex-direction: column;
+}
+
+.index-button {
+    font-size: 1em;
+    text-align: left;
+}
+
+.function {
+    background: #ffff84;
+}
+
+.syntax {
+    background: #ffc4ff;
+}
+
+.data-type {
+    background: #7effff;
+}
