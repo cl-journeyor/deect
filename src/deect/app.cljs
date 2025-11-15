@@ -1,6 +1,7 @@
 (ns deect.app
   (:require [deect.atoms :as ats]
-            [deect.lang-items :refer [lang-items]]
+            [deect.screens.index :refer [index]]
+            [deect.screens.item-screen :refer [item-screen]]
             [reagent.core :as r]))
 
 (defn- print-selected-lang-item
@@ -13,20 +14,6 @@
 
 (r/defc app
   []
-  (letfn [(lang-item->button
-            [i li]
-            [:button {:key i
-                      :class (str "index-button " (name (:type li)))
-                      :type "button"
-                      :on-click (fn []
-                                  (swap!
-                                   ats/selected-lang-item
-                                   (fn [_] li)))}
-             (:name li)])]
-    (fn []
-      (if @ats/selected-lang-item
-        (do
-          (print-selected-lang-item)
-          [:h2 "OK"])
-        [:div.index
-         (map-indexed lang-item->button lang-items)]))))
+  (if @ats/selected-lang-item
+    [item-screen]
+    [index]))

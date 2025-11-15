@@ -24,3 +24,24 @@
 .data-type {
     background: #7effff;
 }
+
+.header {
+    text-align: center;
+}
+
+.displays {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.lang-button {
+    border-radius: 100%;
+    display: flex;
+    overflow: hidden;
+    padding: 0;
+}
+
+.lang-button-icon {
+    height: 2em;
+    width: 2em;
+}
