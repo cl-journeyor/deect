@@ -1,7 +1,7 @@
 (ns deect.app
   (:require [deect.atoms :as ats]
-            [deect.screens.index :refer [index]]
-            [deect.screens.item-screen :refer [item-screen]]
+            [deect.index.core :refer [index]]
+            [deect.item-screen.core :refer [item-screen]]
             [reagent.core :as r]))
 
 (defn- print-selected-lang-item
