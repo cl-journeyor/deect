@@ -127,4 +127,4 @@
                    ["booleanExpr ? trueReturn : falseReturn"]
                    ["booleanExpr ? trueReturn : falseReturn"]
                    ["expression ? truthyReturn : falsyReturn"]
-                   ["truthyReturn if expression else falsyReturn"]))])
+                   ["truthy_return if expression else falsy_return"]))])

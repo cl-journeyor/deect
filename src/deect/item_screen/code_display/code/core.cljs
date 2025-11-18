@@ -4,11 +4,12 @@
 
 (r/defc code
   [{selected-code-key :selected-code-key}]
-  [:pre
-   (let [{:keys [lang page]} (@ats/selected-code selected-code-key)]
-     (if lang
-       (-> @ats/selected-lang-item
-           :ccrec
-           lang
-           (get page))
-       "Click a language from above"))])
+  (let [{:keys [lang page]} (@ats/selected-code selected-code-key)]
+    (if lang
+      (if-let [content (-> @ats/selected-lang-item
+                           :ccrec
+                           lang
+                           (get page))]
+        [:pre.display-content content]
+        [:div.display-message "Not supported"])
+      [:div.display-message "Click a language from above"])))

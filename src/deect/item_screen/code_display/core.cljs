@@ -8,5 +8,4 @@
   [{selected-code-key :selected-code-key}]
   [:div.code-display
    [menu {:selected-code-key selected-code-key}]
-   [code {:selected-code-key selected-code-key}]
-   #_[]])
+   [code {:selected-code-key selected-code-key}]])

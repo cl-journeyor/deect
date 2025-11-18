@@ -4,7 +4,7 @@
 
 (r/defc menu
   [{selected-code-key :selected-code-key}]
-  [:menu
+  [:menu.lang-menu
    (for [[k n] {:clojure "Clojure"
                 :csharp "C#"
                 :java "Java"

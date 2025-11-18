@@ -1,47 +1,86 @@
 * {
     box-sizing: border-box;
+    font-family: sans-serif;
     margin: 0;
 }
 
+/* Screen that shows the list of language items as buttons */
 .index {
     display: flex;
     flex-direction: column;
 }
 
 .index-button {
+    border: none;
     font-size: 1em;
+    margin: 2px;
+    padding: 2px;
     text-align: left;
 }
 
+/* Styles according to the language item type */
 .function {
     background: #ffff84;
 }
-
 .syntax {
     background: #ffc4ff;
 }
-
 .data-type {
     background: #7effff;
 }
 
+/* Header of the item screen */
 .header {
+    padding: 5px;
     text-align: center;
 }
 
+/* Container of the two displays */
 .displays {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+}
+
+.code-display {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/* Menu with the language buttons */
+.lang-menu {
+    background: #333;
+    display: flex;
+    list-style: none;
+    padding: 0;
 }
 
 .lang-button {
+    background: white;
     border-radius: 100%;
+    border-style: none;
     display: flex;
+    margin: 2px;
     overflow: hidden;
-    padding: 0;
+    padding: 2px;
 }
 
 .lang-button-icon {
     height: 2em;
     width: 2em;
+}
+
+/* Code container */
+.display-message {
+    background: #222;
+    color: white;
+    flex-grow: 1;
+    padding: 5px;
+}
+.display-content {
+    background: #222;
+    color: white;
+    flex-grow: 1;
+    font-family: "Cascadia Code", "Consolas", "Courier New", monospace;
+    overflow: auto;
+    padding: 5px 5px 15px 5px;
 }
