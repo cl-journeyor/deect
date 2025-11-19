@@ -11,12 +11,11 @@
              (fn [prev]
                (assoc prev group {:lang lang-keyword
                                   :page 0}))))]
-    (fn []
-      [:button.lang-button {:type "button"
-                            :title lang-name
-                            :on-click show-code}
-       [:img.lang-button-icon {:src (str
-                                     "/images/"
-                                     (name lang-keyword)
-                                     ".png")
-                               :alt lang-name}]])))
+    [:button.lang-button {:type "button"
+                          :title lang-name
+                          :on-click show-code}
+     [:img.lang-button-icon {:src (str
+                                   "/images/"
+                                   (name lang-keyword)
+                                   ".png")
+                             :alt lang-name}]]))
