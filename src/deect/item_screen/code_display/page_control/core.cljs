@@ -1,25 +1,26 @@
 (ns deect.item-screen.code-display.page-control.core
-  (:require [reagent.core :as r]))
+  (:require [deect.atoms :as ats]
+            [reagent.core :as r]
+            [reusable.page-control :as pc]))
 
 (r/defc page-control
-  [{:keys [name value min max on-change]
-    :or {value 1
-         min 1
-         max 3
-         on-change (fn [_] nil)}}]
-  (let [pages (-> (range min (inc max)) set)
-        current (r/atom (if (contains? pages value) value min))
-        swap-current! (fn [f]
-                        (swap! current f)
-                        (on-change {:name name
-                                    :value @current}))]
-    [:div
-     [:button {:type "button"
-               :on-click #(swap-current! dec)
-               :disabled (= @current min)}
-      "◁"]
-     @current
-     [:button {:type "button"
-               :on-click #(swap-current! inc)
-               :disabled (= @current max)}
-      "▷"]]))
+  [{selected-code-key :selected-code-key}]
+  (let [lang (:lang (@ats/selected-code selected-code-key))
+        code-coll-last-index (-> @ats/selected-lang-item
+                                 :ccrec
+                                 (get lang)
+                                 count
+                                 dec)
+        update-page! (fn [{value :value}]
+                       (swap!
+                        ats/selected-code
+                        #(assoc % selected-code-key {:lang lang
+                                                     :page value})))]
+    (if (= code-coll-last-index -1)
+      [pc/page-control {:value 0
+                        :min 0
+                        :max 0}]
+      [pc/page-control {:value (:page (@ats/selected-code selected-code-key))
+                        :min 0
+                        :max code-coll-last-index
+                        :on-change update-page!}])))

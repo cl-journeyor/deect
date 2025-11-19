@@ -57,8 +57,8 @@
 }
 
 .code-display {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 0fr 1fr 0fr;
     width: 50%;
 }
 
@@ -89,13 +89,11 @@
 .display-message {
     background: #222;
     color: white;
-    flex-grow: 1;
     padding: 5px;
 }
 .display-content {
     background: #222;
     color: white;
-    flex-grow: 1;
     font-family: "Cascadia Code", "Consolas", "Courier New", monospace;
     overflow: auto;
     padding: 5px 5px 15px 5px;
