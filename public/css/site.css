@@ -31,8 +31,24 @@
 
 /* Header of the item screen */
 .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 5px;
-    text-align: center;
+}
+
+.exit-button {
+    background: red;
+    border-radius: 100%;
+    border-style: none;
+    color: white;
+    height: 2em;
+    width: 2em;
+}
+
+.header-text {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 /* Container of the two displays */
