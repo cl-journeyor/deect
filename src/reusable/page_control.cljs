@@ -13,12 +13,12 @@
                         (swap! current f)
                         (on-change {:name name
                                     :value @current}))]
-    [:div
+    [:span
      [:button {:type "button"
                :on-click #(swap-current! dec)
                :disabled (= @current min)}
       "◁"]
-     @current
+     [:span @current]
      [:button {:type "button"
                :on-click #(swap-current! inc)
                :disabled (= @current max)}

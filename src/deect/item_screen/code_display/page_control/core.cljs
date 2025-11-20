@@ -16,11 +16,11 @@
                         ats/selected-code
                         #(assoc % selected-code-key {:lang lang
                                                      :page value})))]
-    (if (= code-coll-last-index -1)
-      [pc/page-control {:value 0
+    [pc/page-control (if (neg? code-coll-last-index)
+                       {:value 0
                         :min 0
-                        :max 0}]
-      [pc/page-control {:value (:page (@ats/selected-code selected-code-key))
+                        :max 0}
+                       {:value (:page (@ats/selected-code selected-code-key))
                         :min 0
                         :max code-coll-last-index
-                        :on-change update-page!}])))
+                        :on-change update-page!})]))
