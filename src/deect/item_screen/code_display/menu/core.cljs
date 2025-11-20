@@ -4,13 +4,13 @@
 
 (r/defc menu
   [{selected-code-key :selected-code-key}]
-  [:menu.lang-menu
+  [:div.lang-menu
    (for [[k n] {:clojure "Clojure"
                 :csharp "C#"
                 :java "Java"
                 :javascript "JavaScript"
                 :python "Python"}]
-     [:li {:key k}
-      [lang-button {:group selected-code-key
-                    :lang-keyword k
-                    :lang-name n}]])])
+     [lang-button {:key k
+                   :group selected-code-key
+                   :lang-keyword k
+                   :lang-name n}])])

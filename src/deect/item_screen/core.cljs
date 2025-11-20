@@ -13,9 +13,7 @@
                                               {:lang nil
                                                :page 0}])))]
     [:div
-     [:header {:class (str
-                       "header "
-                       (name (:type @ats/selected-lang-item)))}
+     [:header {:class (name (:type @ats/selected-lang-item))}
       [:button.exit-button {:type "button"
                             :on-click reset-atoms}
        "×"]
