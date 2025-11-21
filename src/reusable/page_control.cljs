@@ -3,6 +3,7 @@
 
 (r/defc page-control
   [{:keys [name value min max on-change]
+    {:keys [self buttons text]} :classes
     :or {value 1
          min 1
          max 3
@@ -13,13 +14,16 @@
                         (swap! current f)
                         (on-change {:name name
                                     :value @current}))]
-    [:span
-     [:button {:type "button"
+    [:span {:class self}
+     [:button {:class buttons
+               :type "button"
                :on-click #(swap-current! dec)
                :disabled (= @current min)}
       "◁"]
-     [:span @current]
-     [:button {:type "button"
+     [:span {:class text}
+      @current]
+     [:button {:class buttons
+               :type "button"
                :on-click #(swap-current! inc)
                :disabled (= @current max)}
       "▷"]]))

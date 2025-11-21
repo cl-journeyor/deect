@@ -91,3 +91,19 @@
     overflow: auto;
     padding: 5px 5px 15px 5px;
 }
+
+/* Page control styles */
+.page-control-container {
+    background: #333;
+    text-align: center;
+}
+.page-control-buttons {
+    border-radius: 100%;
+    border-style: none;
+    height: 2em;
+    margin: 2px;
+    width: 2em;
+}
+.page-control-text {
+    color: white;
+}

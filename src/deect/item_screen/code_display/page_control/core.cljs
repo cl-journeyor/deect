@@ -15,12 +15,17 @@
                        (swap!
                         ats/selected-code
                         #(assoc % selected-code-key {:lang lang
-                                                     :page value})))]
-    [pc/page-control (if (neg? code-coll-last-index)
-                       {:value 0
-                        :min 0
-                        :max 0}
-                       {:value (:page (@ats/selected-code selected-code-key))
-                        :min 0
-                        :max code-coll-last-index
-                        :on-change update-page!})]))
+                                                     :page value})))
+        pc-props {:classes {:buttons "page-control-buttons"
+                            :text "page-control-text"}
+                  :min 0}]
+    [:div.page-control-container
+     [pc/page-control
+      (if (neg? code-coll-last-index)
+        (-> pc-props
+            (assoc :value 0)
+            (assoc :max 0))
+        (-> pc-props
+            (assoc :value (:page (@ats/selected-code selected-code-key)))
+            (assoc :max code-coll-last-index)
+            (assoc :on-change update-page!)))]]))
