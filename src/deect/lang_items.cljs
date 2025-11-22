@@ -12,6 +12,49 @@
   (str/join \newline args))
 
 (def lang-items [(LangItem.
+                  "Addition ¦ Add ¦ Plus"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(+ 2 3)"]
+                   ["2 + 3"]
+                   ["2 + 3"]
+                   ["2 + 3"]
+                   ["2 + 3"]))
+                 (LangItem.
+                  "Big integer"
+                  (:data-type lang-item-type)
+                  (CodeCollRec.
+                   [(ml-str
+                     ";;; Type."
+                     "clojure.lang.BigInt"
+                     ""
+                     ";;; Literal."
+                     "123N")]
+                   [(ml-str
+                     "// Fully-qualified type"
+                     "System.Numerics.BigInteger"
+                     ""
+                     "// Instance"
+                     "BigInteger.Parse(\"123\")")]
+                   [(ml-str
+                     "// Fully-qualified type"
+                     "java.math.BigInteger"
+                     ""
+                     "// Instance"
+                     "new BigInteger(\"123\")")]
+                   [(ml-str
+                     "// Type"
+                     "// bigint"
+                     ""
+                     "// Literal"
+                     "123n")]
+                   [(ml-str
+                     "# Type"
+                     "# int"
+                     ""
+                     "# Literal"
+                     "123")]))
+                 (LangItem.
                   "Decimal"
                   (:data-type lang-item-type)
                   (CodeCollRec.
@@ -43,6 +86,34 @@
                      ""
                      "# Instance"
                      "Decimal('123.456')")]))
+                 (LangItem.
+                  "Division ¦ Divide"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(/ 2 3.0)"
+                    (ml-str
+                     ";;; Returns a ratio when the remainder from dividing two"
+                     ";;; integers is not zero."
+                     "(/ 2 3)")]
+                   ["2 / 3"]
+                   ["2 / 3"]
+                   ["2 / 3"]
+                   ["2 / 3"
+                    (ml-str
+                     "# Integer division"
+                     "2 // 3")]))
+                 (LangItem.
+                  "Equality ¦ Equal to"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(= 2 3)"
+                    (ml-str
+                     ";;; Semantic number equality."
+                     "(== 2 3.0)")]
+                   ["2 == 3"]
+                   ["2 == 3"]
+                   ["2 === 3"]
+                   ["2 == 3"]))
                  (LangItem.
                   "if"
                   (:syntax lang-item-type)
@@ -108,6 +179,33 @@
                      "else:"
                      "    pass")]))
                  (LangItem.
+                  "Inequality ¦ Not equal"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(not= 2 3)"]
+                   ["2 != 3"]
+                   ["2 != 3"]
+                   ["2 !== 3"]
+                   ["2 != 3"]))
+                 (LangItem.
+                  "Modulus ¦ Modulo ¦ Mod ¦ Remainder"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(mod 2 3)"]
+                   ["2 % 3"]
+                   ["2 % 3"]
+                   ["2 % 3"]
+                   ["2 % 3"]))
+                 (LangItem.
+                  "Multiplication ¦ Multiply"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(* 2 3)"]
+                   ["2 * 3"]
+                   ["2 * 3"]
+                   ["2 * 3"]
+                   ["2 * 3"]))
+                 (LangItem.
                   "Print"
                   (:function lang-item-type)
                   (CodeCollRec.
@@ -116,6 +214,87 @@
                    ["System.out.println(value);"]
                    ["console.log(value);"]
                    ["print(value)"]))
+                 (LangItem.
+                  "String"
+                  (:data-type lang-item-type)
+                  (CodeCollRec.
+                   [(ml-str
+                     ";;; Type."
+                     "java.lang.String"
+                     ""
+                     ";;; Literal."
+                     "\"Hello\"")]
+                   [(ml-str
+                     "// Fully-qualified type"
+                     "System.String"
+                     ""
+                     "// Type"
+                     "string"
+                     ""
+                     "// Literal"
+                     "\"Hello\"")]
+                   [(ml-str
+                     "// Fully-qualified type"
+                     "java.lang.String"
+                     ""
+                     "// Type"
+                     "String"
+                     ""
+                     "// Literal"
+                     "\"Hello\"")]
+                   [(ml-str
+                     "// Type"
+                     "// string"
+                     ""
+                     "// Literal"
+                     "'Hello'")
+                    (ml-str
+                     "// Type"
+                     "// string"
+                     ""
+                     "// Literal"
+                     "\"Hello\"")]
+                   [(ml-str
+                     "# Type"
+                     "# str"
+                     ""
+                     "# Literal"
+                     "'Hello'")]))
+                 (LangItem.
+                  "String concatenation"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(str :a :b)"]
+                   [(ml-str
+                     "// Any of the operands must be a string"
+                     "\"a\" + 1")]
+                   [(ml-str
+                     "// Any of the operands must be a string"
+                     "\"a\" + 1")]
+                   [(ml-str
+                     "// Any of the operands must be a string"
+                     "'a' + 1")]
+                   [(ml-str
+                     "# Both operands must be strings"
+                     "'a' + str(1)")]))
+                 (LangItem.
+                  "String interpolation"
+                  (:syntax lang-item-type)
+                  (CodeCollRec.
+                   []
+                   ["$\"The value: {val}\""]
+                   []
+                   ["`The value: ${ value }`"]
+                   ["f'The value: { value }'"]))
+                 (LangItem.
+                  "Subtraction ¦ Subtract ¦ Minus"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(- 2 3)"]
+                   ["2 - 3"]
+                   ["2 - 3"]
+                   ["2 - 3"]
+                   ["2 - 3"]))
                  (LangItem.
                   "Ternary operator ¦ Ternary expression"
                   (:syntax lang-item-type)

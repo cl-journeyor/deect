@@ -1,0 +1,80 @@
+[{
+    "id": "addition",
+    "name": "Addition ¦ Add ¦ Plus",
+    "type": "function"
+},
+{
+    "id": "big-integer",
+    "name": "Big integer",
+    "type": "data-type"
+},
+{
+    "id": "decimal",
+    "name": "Decimal",
+    "type": "data-type"
+},
+{
+    "id": "division",
+    "name": "Division ¦ Divide",
+    "type": "function"
+},
+{
+    "id": "equality",
+    "name": "Equality ¦ Equal to",
+    "type": "function"
+},
+{
+    "id": "if",
+    "name": "if",
+    "type": "syntax"
+},
+{
+    "id": "if-else",
+    "name": "if-else",
+    "type": "syntax"
+},
+{
+    "id": "inequality",
+    "name": "Inequality ¦ Not equal",
+    "type": "function"
+},
+{
+    "id": "modulus",
+    "name": "Modulus ¦ Modulo ¦ Mod ¦ Remainder",
+    "type": "function"
+},
+{
+    "id": "multiplication",
+    "name": "Multiplication ¦ Multiply",
+    "type": "function"
+},
+{
+    "id": "print",
+    "name": "Print",
+    "type": "function"
+},
+{
+    "id": "string",
+    "name": "String",
+    "type": "data-type"
+},
+{
+    "id": "string-concatenation",
+    "name": "String concatenation",
+    "type": "function"
+},
+{
+    "id": "string-interpolation",
+    "name": "String interpolation",
+    "type": "syntax"
+},
+{
+    "id": "subtraction",
+    "name": "Subtraction ¦ Subtract ¦ Minus",
+    "type": "function"
+},
+{
+    "id": "ternary-operator",
+    "name": "Ternary operator ¦ Ternary expression",
+    "type": "syntax"
+}]
