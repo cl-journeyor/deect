@@ -4,9 +4,19 @@
     "type": "function"
 },
 {
+    "id": "and",
+    "name": "And",
+    "type": "function"
+},
+{
     "id": "big-integer",
     "name": "Big integer",
     "type": "data-type"
+},
+{
+    "id": "comment",
+    "name": "Comment",
+    "type": "syntax"
 },
 {
     "id": "decimal",
@@ -46,6 +56,16 @@
 {
     "id": "multiplication",
     "name": "Multiplication ¦ Multiply",
+    "type": "function"
+},
+{
+    "id": "not",
+    "name": "Not",
+    "type": "function"
+},
+{
+    "id": "or",
+    "name": "Or",
     "type": "function"
 },
 {

@@ -21,6 +21,15 @@
                    ["2 + 3"]
                    ["2 + 3"]))
                  (LangItem.
+                  "And"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(and :expression1 :expression2)"]
+                   ["booleanExpr1 && booleanExpr2"]
+                   ["booleanExpr1 && booleanExpr2"]
+                   ["expression1 && expression2"]
+                   ["expression1 and expression2"]))
+                 (LangItem.
                   "Big integer"
                   (:data-type lang-item-type)
                   (CodeCollRec.
@@ -54,6 +63,30 @@
                      ""
                      "# Literal"
                      "123")]))
+                 (LangItem.
+                  "Comment"
+                  (:syntax lang-item-type)
+                  (CodeCollRec.
+                   ["; Comment."]
+                   ["// Single-line comment"
+                    (ml-str
+                     "/*"
+                     "Multiline"
+                     "comment"
+                     "*/")]
+                   ["// Single-line comment"
+                    (ml-str
+                     "/*"
+                     "Multiline"
+                     "comment"
+                     "*/")]
+                   ["// Single-line comment"
+                    (ml-str
+                     "/*"
+                     "Multiline"
+                     "comment"
+                     "*/")]
+                   ["# Comment"]))
                  (LangItem.
                   "Decimal"
                   (:data-type lang-item-type)
@@ -205,6 +238,24 @@
                    ["2 * 3"]
                    ["2 * 3"]
                    ["2 * 3"]))
+                 (LangItem.
+                  "Not"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(not :expression)"]
+                   ["!booleanExpr"]
+                   ["!booleanExpr"]
+                   ["!expression"]
+                   ["not expression"]))
+                 (LangItem.
+                  "Or"
+                  (:function lang-item-type)
+                  (CodeCollRec.
+                   ["(or :expression1 :expression2)"]
+                   ["booleanExpr1 || booleanExpr2"]
+                   ["booleanExpr1 || booleanExpr2"]
+                   ["expression1 || expression2"]
+                   ["expression1 or expression2"]))
                  (LangItem.
                   "Print"
                   (:function lang-item-type)
