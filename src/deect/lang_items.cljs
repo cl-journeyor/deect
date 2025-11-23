@@ -64,6 +64,51 @@
                      "# Literal"
                      "123")]))
                  (LangItem.
+                  "Boolean ¦ Bool"
+                  (:data-type lang-item-type)
+                  (CodeCollRec.
+                   [(ml-str
+                     ";;; Type."
+                     "java.lang.Boolean"
+                     ""
+                     ";;; Literals."
+                     "false"
+                     "true")]
+                   [(ml-str
+                     "// Fully-qualified type"
+                     "System.Boolean"
+                     ""
+                     "// Type"
+                     "bool"
+                     ""
+                     "// Literals"
+                     "false"
+                     "true")]
+                   [(ml-str
+                     "// Class"
+                     "java.lang.Boolean"
+                     ""
+                     "// Primitive type"
+                     "boolean"
+                     ""
+                     "// Literals"
+                     "false"
+                     "true")]
+                   [(ml-str
+                     "// Type"
+                     "// boolean"
+                     ""
+                     "// Literals"
+                     "false"
+                     "true")]
+                   [(ml-str
+                     "# Type"
+                     "# bool"
+                     ""
+                     "# Literals"
+                     "False"
+                     "True")]))
+                 (LangItem.
                   "Comment"
                   (:syntax lang-item-type)
                   (CodeCollRec.
@@ -247,6 +292,15 @@
                    ["!booleanExpr"]
                    ["!expression"]
                    ["not expression"]))
+                 (LangItem.
+                  "Null ¦ No value"
+                  (:syntax lang-item-type)
+                  (CodeCollRec.
+                   ["nil"]
+                   ["null"]
+                   ["null"]
+                   ["undefined" "null"]
+                   ["None"]))
                  (LangItem.
                   "Or"
                   (:function lang-item-type)

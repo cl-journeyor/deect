@@ -14,6 +14,11 @@
     "type": "data-type"
 },
 {
+    "id": "boolean",
+    "name": "Boolean",
+    "type": "data-type"
+},
+{
     "id": "comment",
     "name": "Comment",
     "type": "syntax"
@@ -62,6 +67,11 @@
     "id": "not",
     "name": "Not",
     "type": "function"
+},
+{
+    "id": "null",
+    "name": "Null ¦ No value",
+    "type": "syntax"
 },
 {
     "id": "or",
