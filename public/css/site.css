@@ -50,7 +50,15 @@
     display: flex;
 }
 
-.code-display {
+.code-display-0 {
+    border-right: #333 1px solid;
+    display: grid;
+    grid-template-rows: 0fr 1fr 0fr;
+    width: 50%;
+}
+
+.code-display-1 {
+    border-left: #333 1px solid;
     display: grid;
     grid-template-rows: 0fr 1fr 0fr;
     width: 50%;
@@ -71,6 +79,10 @@
     margin: 2px;
     overflow: hidden;
     padding: 2px;
+}
+
+.lang-button:disabled {
+    opacity: 0.5;
 }
 
 .lang-button-icon {

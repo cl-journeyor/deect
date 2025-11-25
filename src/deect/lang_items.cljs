@@ -12,7 +12,7 @@
   (str/join \newline args))
 
 (def lang-items [(LangItem.
-                  "Addition ¦ Add ¦ Plus"
+                  "Addition ¦ Add"
                   (:function lang-item-type)
                   (CodeCollRec.
                    ["(+ 2 3)"]
@@ -392,7 +392,7 @@
                    ["`The value: ${ value }`"]
                    ["f'The value: { value }'"]))
                  (LangItem.
-                  "Subtraction ¦ Subtract ¦ Minus"
+                  "Subtraction ¦ Subtract"
                   (:function lang-item-type)
                   (CodeCollRec.
                    ["(- 2 3)"]
@@ -411,4 +411,39 @@
                    ["booleanExpr ? trueReturn : falseReturn"]
                    ["booleanExpr ? trueReturn : falseReturn"]
                    ["expression ? truthyReturn : falsyReturn"]
-                   ["truthy_return if expression else falsy_return"]))])
+                   ["truthy_return if expression else falsy_return"]))
+                 (LangItem.
+                  "Variable (Declaration and assignment of a local variable)"
+                  (:syntax lang-item-type)
+                  (CodeCollRec.
+                   [(ml-str
+                     ";; Local bindings cannot be reassigned."
+                     ";; Replace nil with any desired value."
+                     "(let [my-value nil]"
+                     "  :body)")]
+                   [(ml-str
+                     "// Replace object with any desired type."
+                     "// Replace null with any desired value."
+                     "object myVar = null;")
+                    (ml-str
+                     "// var is valid when the compiler can determine the type"
+                     "// of the value"
+                     "var myVar = \"value\";")]
+                   [(ml-str
+                     "// Replace Object with any desired type."
+                     "// Replace null with any desired value."
+                     "Object myVar = null;")
+                    (ml-str
+                     "// var is valid when the compiler can determine the type"
+                     "// of the value"
+                     "var myVar = \"value\";")]
+                   [(ml-str
+                     "// Replace undefined with any desired value"
+                     "let myVar = undefined;")
+                    (ml-str
+                     "// Declaration and assignment of a constant."
+                     "// Replace undefined with any desired value."
+                     "const myConst = undefined;")]
+                   [(ml-str
+                     "# Replace None with any desired value"
+                     "my_var = None")]))])

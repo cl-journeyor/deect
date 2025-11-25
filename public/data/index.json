@@ -1,6 +1,6 @@
 [{
     "id": "addition",
-    "name": "Addition ¦ Add ¦ Plus",
+    "name": "Addition ¦ Add",
     "type": "function"
 },
 {
@@ -100,11 +100,16 @@
 },
 {
     "id": "subtraction",
-    "name": "Subtraction ¦ Subtract ¦ Minus",
+    "name": "Subtraction ¦ Subtract",
     "type": "function"
 },
 {
     "id": "ternary-operator",
     "name": "Ternary operator ¦ Ternary expression",
+    "type": "syntax"
+},
+{
+    "id": "variable",
+    "name": "Variable (Declaration and assignment of a local variable)",
     "type": "syntax"
 }]

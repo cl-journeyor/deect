@@ -6,7 +6,7 @@
 
 (r/defc code-display
   [{selected-code-key :selected-code-key}]
-  [:div.code-display
+  [:div {:class (str "code-display-" selected-code-key)}
    [menu {:selected-code-key selected-code-key}]
    [code {:selected-code-key selected-code-key}]
    [page-control {:selected-code-key selected-code-key}]])

@@ -13,7 +13,10 @@
                                   :page 0}))))]
     [:button.lang-button {:type "button"
                           :title lang-name
-                          :on-click show-code}
+                          :on-click show-code
+                          :disabled (= lang-keyword (-> @ats/selected-code
+                                                        (nth group)
+                                                        :lang))}
      [:img.lang-button-icon {:src (str
                                    "/images/"
                                    (name lang-keyword)
