@@ -1,0 +1,7 @@
+{
+    "clojure": [ ";;; Type.\nclojure.lang.BigInt\n\n;;; Literal.\n123N" ],
+    "csharp": [ "// Fully-qualified type\nSystem.Numerics.BigInteger\n\n// Instance\nBigInteger.Parse(\"123\")" ],
+    "java": [ "// Fully-qualified type\njava.math.BigInteger\n\n// Instance\nnew BigInteger(\"123\")" ],
+    "javascript": [ "// Type\n// bigint\n\n// Literal\n123n" ],
+    "python": [ "# Type\n# int\n\n# Literal\n123" ]
+}
