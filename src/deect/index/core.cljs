@@ -5,7 +5,7 @@
 (r/defc index
   []
   (let [lang-items (r/atom nil)]
-    (-> (js/fetch "data/index.json")
+    (-> (js/fetch "data/lang-items.json")
         (.then #(.json %))
         (.then #(swap! lang-items (fn [_] (js->clj % :keywordize-keys true))))
         (.catch #(swap! lang-items (fn [_] :fetch-error))))
