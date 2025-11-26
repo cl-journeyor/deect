@@ -1,7 +1,7 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [ "(mod 2 3)" ],
+    "csharp": [ "2 % 3" ],
+    "java": [ "2 % 3" ],
+    "javascript": [ "2 % 3" ],
+    "python": [ "2 % 3" ]
 }

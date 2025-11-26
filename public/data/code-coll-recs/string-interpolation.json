@@ -1,7 +1,7 @@
 {
     "clojure": [],
-    "csharp": [],
+    "csharp": [ "$\"The value: {val}\"" ],
     "java": [],
-    "javascript": [],
-    "python": []
+    "javascript": [ "`The value: ${ value }`" ],
+    "python": [ "f'The value: { value }'" ]
 }

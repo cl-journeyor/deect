@@ -1,7 +1,10 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [ "nil" ],
+    "csharp": [ "null" ],
+    "java": [ "null" ],
+    "javascript": [
+        "undefined",
+        "null"
+    ],
+    "python": [ "None" ]
 }

@@ -1,7 +1,10 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [
+        "(if :expression\n  :truthy-return\n  :falsy-return)",
+        ";;; Returns nil if falsy.\n(when :expression\n  :body)"
+    ],
+    "csharp": [ "if (booleanExpr)\n{\n    // Body\n}" ],
+    "java": [ "if (booleanExpr) {\n    // Body\n}" ],
+    "javascript": [ "if (expression) {\n    // Body\n}" ],
+    "python": [ "if expression:\n    pass" ]
 }

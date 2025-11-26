@@ -1,7 +1,7 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [ "(if :expression\n  :truthy-return\n  :falsy-return)" ],
+    "csharp": [ "if (booleanExpr)\n{\n    // Body\n}\nelse\n{\n    // Body\n}" ],
+    "java": [ "if (booleanExpr) {\n    // Body\n}\nelse {\n    // Body\n}" ],
+    "javascript": [ "if (expression) {\n    // Body\n}\nelse {\n    // Body\n}" ],
+    "python": [ "if expression:\n    pass\nelse:\n    pass" ]
 }

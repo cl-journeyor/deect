@@ -1,7 +1,10 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [ ";;; Type.\njava.lang.String\n\n;;; Literal.\n\"Hello\"" ],
+    "csharp": [ "// Fully-qualified type\nSystem.String\n\n// Type\nstring\n\n// Literal\n\"Hello\"" ],
+    "java": [ "// Fully-qualified type\njava.lang.String\n\n// Type\nString\n\n// Literal\n\"Hello\"" ],
+    "javascript": [
+        "// Type\n// string\n\n// Literal\n'Hello'",
+        "// Type\n// string\n\n// Literal\n\"Hello\""
+    ],
+    "python": [ "# Type\n# str\n\n# Literal\n'Hello'" ]
 }

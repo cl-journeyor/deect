@@ -1,7 +1,13 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [
+        "(/ 2 3.0)",
+        ";;; Returns a ratio when the remainder from dividing two integers is not zero.\n(/ 2 3)"
+    ],
+    "csharp": [ "2 / 3" ],
+    "java": [ "2 / 3" ],
+    "javascript": [ "2 / 3" ],
+    "python": [
+        "2 / 3",
+        "# Integer division\n2 // 3"
+    ]
 }

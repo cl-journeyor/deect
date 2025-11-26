@@ -1,7 +1,7 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [ "(not :expression)" ],
+    "csharp": [ "!booleanExpr" ],
+    "java": [ "!booleanExpr" ],
+    "javascript": [ "!expression" ],
+    "python": [ "not expression" ]
 }

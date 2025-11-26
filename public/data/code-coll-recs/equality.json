@@ -1,7 +1,10 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [
+        "(= 2 3)",
+        ";;; Semantic number equality.\n(== 2 3.0)"
+    ],
+    "csharp": [ "2 == 3" ],
+    "java": [ "2 == 3" ],
+    "javascript": [ "2 === 3" ],
+    "python": [ "2 == 3" ]
 }

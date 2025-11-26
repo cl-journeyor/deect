@@ -1,7 +1,7 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [ "(or :expression1 :expression2)" ],
+    "csharp": [ "booleanExpr1 || booleanExpr2" ],
+    "java": [ "booleanExpr1 || booleanExpr2" ],
+    "javascript": [ "expression1 || expression2" ],
+    "python": [ "expression1 or expression2" ]
 }

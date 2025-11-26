@@ -1,7 +1,16 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [ ";; Local bindings cannot be reassigned.\n;; Replace nil with any desired value.\n(let [my-value nil]\n  :body)" ],
+    "csharp": [
+        "// Replace object with any desired type.\n// Replace null with any desired value.\nobject myVar = null;",
+        "// var is valid when the compiler can determine the type of the value\nvar myVar = \"value\";"
+    ],
+    "java": [
+        "// Replace Object with any desired type.\n// Replace null with any desired value.\nObject myVar = null;",
+        "// var is valid when the compiler can determine the type of the value\nvar myVar = \"value\";"
+    ],
+    "javascript": [
+        "// Replace undefined with any desired value\nlet myVar = undefined;",
+        "// Declaration and assignment of a constant.\n// Replace undefined with any desired value.\nconst myConst = undefined;"
+    ],
+    "python": [ "# Replace None with any desired value\nmy_var = None" ]
 }

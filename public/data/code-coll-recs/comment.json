@@ -1,7 +1,16 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [ "; Comment." ],
+    "csharp": [
+        "// Single-line comment",
+        "/*\nMultiline\ncomment\n*/"
+    ],
+    "java": [
+        "// Single-line comment",
+        "/*\nMultiline\ncomment\n*/"
+    ],
+    "javascript": [
+        "// Single-line comment",
+        "/*\nMultiline\ncomment\n*/"
+    ],
+    "python": [ "# Comment" ]
 }

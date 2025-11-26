@@ -1,7 +1,7 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
-    "javascript": [],
-    "python": []
+    "clojure": [ ";;; Type.\njava.lang.Boolean\n\n;;; Literals.\nfalse\ntrue" ],
+    "csharp": [ "// Fully-qualified type\nSystem.Boolean\n\n// Type\nbool\n\n// Literals\nfalse\ntrue" ],
+    "java": [ "// Class\njava.lang.Boolean\n\n// Primitive type\nboolean\n\n// Literals\nfalse\ntrue" ],
+    "javascript": [ "// Type\n// boolean\n\n// Literals\nfalse\ntrue" ],
+    "python": [ "# Type\n# bool\n\n# Literals\nFalse\nTrue" ]
 }

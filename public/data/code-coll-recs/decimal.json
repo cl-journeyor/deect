@@ -1,7 +1,7 @@
 {
-    "clojure": [],
-    "csharp": [],
-    "java": [],
+    "clojure": [ ";;; Type.\njava.math.BigDecimal\n\n;;; Literal.\n123.456M" ],
+    "csharp": [ "// Fully-qualified type\nSystem.Decimal\n\n// Type\ndecimal\n\n// Literal\n123.456M" ],
+    "java": [ "// Fully-qualified type\njava.math.BigDecimal\n\n// Instance\nnew BigDecimal(\"123.456\")" ],
     "javascript": [],
-    "python": []
+    "python": [ "# Class\n# decimal.Decimal\n\n# Instance\nDecimal('123.456')" ]
 }
