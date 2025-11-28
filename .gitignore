@@ -9,8 +9,7 @@ pom.xml.asc
 /.lein-*
 /.nrepl-port
 /resources/docs/js
-/docs/js/cljs-runtime
-/docs/js/manifest.edn
+/docs/js
 /out
 /.repl
 *.log
