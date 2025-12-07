@@ -18,7 +18,7 @@
                                                         (nth group)
                                                         :lang))}
      [:img.lang-button-icon {:src (str
-                                   "/images/"
+                                   "images/"
                                    (name lang-keyword)
                                    ".png")
                              :alt lang-name}]]))
