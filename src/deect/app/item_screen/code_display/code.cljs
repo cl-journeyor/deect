@@ -1,4 +1,4 @@
-(ns deect.item-screen.code-display.code.core
+(ns deect.app.item-screen.code-display.code
   (:require [deect.atoms :as ats]
             [reagent.core :as r]))
 

@@ -1,6 +1,6 @@
-(ns deect.item-screen.core
-  (:require [deect.atoms :as ats]
-            [deect.item-screen.code-display.core :refer [code-display]]
+(ns deect.app.item-screen
+  (:require [deect.app.item-screen.code-display :refer [code-display]]
+            [deect.atoms :as ats]
             [reagent.core :as r]))
 
 (r/defc item-screen

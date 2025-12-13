@@ -1,7 +1,7 @@
 (ns deect.app
-  (:require [deect.atoms :as ats]
-            [deect.index.core :refer [index]]
-            [deect.item-screen.core :refer [item-screen]]
+  (:require [deect.app.index :refer [index]]
+            [deect.app.item-screen :refer [item-screen]]
+            [deect.atoms :as ats]
             [reagent.core :as r]))
 
 (r/defc app

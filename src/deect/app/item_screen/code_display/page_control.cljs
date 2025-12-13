@@ -1,4 +1,4 @@
-(ns deect.item-screen.code-display.page-control.core
+(ns deect.app.item-screen.code-display.page-control
   (:require [deect.atoms :as ats]
             [reagent.core :as r]
             [reusable.page-control :as pc]))

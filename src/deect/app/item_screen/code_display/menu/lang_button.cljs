@@ -1,4 +1,4 @@
-(ns deect.item-screen.code-display.menu.lang-button.core
+(ns deect.app.item-screen.code-display.menu.lang-button
   (:require [deect.atoms :as ats]
             [reagent.core :as r]))
 

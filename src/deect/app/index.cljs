@@ -1,5 +1,5 @@
-(ns deect.index.core
-  (:require [deect.index.index-button.core :refer [index-button]]
+(ns deect.app.index
+  (:require [deect.app.index.index-button :refer [index-button]]
             [deect.utils :as u]
             [reagent.core :as r]))
 

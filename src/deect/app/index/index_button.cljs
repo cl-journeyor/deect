@@ -1,4 +1,4 @@
-(ns deect.index.index-button.core
+(ns deect.app.index.index-button
   (:require [deect.atoms :as ats]
             [deect.utils :as u]
             [reagent.core :as r]))

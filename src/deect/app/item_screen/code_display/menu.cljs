@@ -1,5 +1,5 @@
-(ns deect.item-screen.code-display.menu.core
-  (:require [deect.item-screen.code-display.menu.lang-button.core :refer [lang-button]]
+(ns deect.app.item-screen.code-display.menu
+  (:require [deect.app.item-screen.code-display.menu.lang-button :refer [lang-button]]
             [reagent.core :as r]))
 
 (r/defc menu
